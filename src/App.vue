@@ -3,9 +3,9 @@
     <div id="nav">
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/chartjs">vue-chartjs</router-link></li>
-        <li><router-link to="/charts">vue-charts</router-link></li>
-        <li><router-link to="/chartkick">vue-chartkick</router-link></li>
+        <li><router-link to="/chartjs">Donation Goal</router-link></li>
+        <li><router-link to="/charts">Donation Usage</router-link></li>
+        <li><router-link to="/chartkick">Donation Distribution</router-link></li>
       </ul>
     </div>
     <router-view />
