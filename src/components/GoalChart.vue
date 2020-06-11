@@ -8,31 +8,58 @@
       return {
         datacollection: {
           //Data to be represented on x-axis
-          labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+          labels: ['Goal Status'],
           datasets: [
             {
-              label: 'Data One',
-              backgroundColor: '#f87979',
+              label: 'Funds Raised',
+              backgroundColor: '#2CC45E',
               pointBackgroundColor: 'white',
               borderWidth: 1,
-              pointBorderColor: '#249EBF',
+              pointBorderColor: '#00000',
               //Data to be represented on y-axis
-              data: [40, 20, 30, 50, 90, 10, 20, 40, 50, 70, 90, 100]
+              data: [1125]
+            },
+            {
+              label: 'Fund Goal',
+              backgroundColor: '#E1E1E1',
+              pointBackgroundColor: 'white',
+              borderWidth: 1,
+              pointBorderColor: '#00000',
+              //Data to be represented on y-axis
+              data: [5000]
             }
           ]
         },
         //Chart.js options that controls the appearance of the chart
         options: {
+          tooltips: {
+            callbacks: {
+              title: function(){
+                //TODO: figure out how to add tooltip title separately for each bar
+                return ''
+              },
+              label: function(tooltipItem) {
+                return '$' + Number(tooltipItem.yLabel)
+              }
+            }
+          },
           scales: {
             yAxes: [{
+              stacked: true,
               ticks: {
-                beginAtZero: true
+                beginAtZero: true,
+                // Include a dollar sign in the ticks
+                    callback: function(value) {
+                        return '$' + value;
+                    },
+                display: true
               },
               gridLines: {
-                display: true
+                display: false,
               }
             }],
             xAxes: [ {
+              stacked: true,
               gridLines: {
                 display: false
               }

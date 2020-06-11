@@ -12,8 +12,8 @@
           labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
           datasets: [
             {
-              label: 'Data One',
-              backgroundColor: '#f87979',
+              label: 'Funds Usage',
+              backgroundColor: '#2CC45E',
               pointBackgroundColor: 'white',
               borderWidth: 1,
               pointBorderColor: '#249EBF',
