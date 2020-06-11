@@ -1,14 +1,14 @@
 <template>
   <section class="container">
-    <h1>Donation Goal Status</h1>
+    <h1>Donation Funds Distribution</h1>
     <div class="columns">
       <!-- <div class="column">
         <h3>Line Chart</h3>
         <line-chart></line-chart>
       </div> -->
       <div class="column">
-        <h3>Bar Chart</h3>
-        <bar-chart></bar-chart>
+        <!-- <h3>Funds Distribution</h3> -->
+        <doughnut-chart></doughnut-chart>
       </div>
     </div>
     <!-- <div class="columns">
@@ -27,73 +27,17 @@
 
 <script>
 // import LineChart from "@/components/UsageChart";
-import BarChart from "@/components/GoalChart";
+// import BarChart from "@/components/GoalChart";
 // import BubbleChart from "@/components/BubbleChart";
-// import Reactive from "@/components/Reactive";
+import DoughnutChart from "@/components/DistChart";
 
 export default {
-  name: "DistChart",
+  name: "GoalChart",
   components: {
     // LineChart
-    BarChart
+    // BarChart
     // BubbleChart,
-    // Reactive
-  },
-  data() {
-    return {
-      // instantiating datacollection with null
-      datacollection: null,
-    };
-  },
-  created() {
-    //anytime the vue instance is created, call the fillData() function.
-    this.fillData();
-  },
-  methods: {
-    fillData() {
-      this.datacollection = {
-        // Data for the y-axis of the chart
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ],
-        datasets: [
-          {
-            label: "Data One",
-            backgroundColor: "#f87979",
-            // Data for the x-axis of the chart
-            data: [
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-            ],
-          },
-        ],
-      }
-    },
-    getRandomInt() {
-      // JS function to generate numbers to be used for the chart
-      return Math.floor(Math.random() * (50 - 5 + 1)) + 5;
-    },
-  },
+    DoughnutChart
+  }
 }
 </script>

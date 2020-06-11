@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/Home'
-import VueChartJS from '@/views/VueChartJS'
-import VueChartKick from '@/views/VueChartKick'
-import VueCharts from '@/views/VueCharts'
+import FundsUsage from '@/views/FundsUsage'
+import FundsGoal from '@/views/FundsGoal'
+import FundsDistribution from '@/views/FundsDistribution'
 
 Vue.use(Router)
 
@@ -15,19 +15,19 @@ export default new Router({
       component: Home
     },
     {
-      path: '/chartjs',
-      name: 'VueChartJS',
-      component: VueChartJS
+      path: '/goal',
+      name: 'FundsGoal',
+      component: FundsGoal
     },
     {
-      path: '/chartkick',
-      name: 'VueChartKick',
-      component: VueChartKick
+      path: '/usage',
+      name: 'FundsUsage',
+      component: FundsUsage
     },
     {
-      path: '/charts',
-      name: 'VueCharts',
-      component: VueCharts
+      path: '/distribution',
+      name: 'FundsDistribution',
+      component: FundsDistribution
     }
   ]
 })

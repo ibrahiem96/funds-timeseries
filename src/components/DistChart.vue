@@ -1,58 +1,59 @@
-<template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
-  </div>
-</template>
-
 <script>
+//Importing Line class from the vue-chartjs wrapper
+import { Doughnut } from 'vue-chartjs'
+
+//Exporting this so it can be used in other components
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
+  extends: Doughnut,
+  data () {
+    return {
+      datacollection: {
+        //Data to be represented on x-axis
+        labels: ['Cleaning Supplies', 'Food', 'Rental Dumpster'],
+        datasets: [
+          {
+            label: 'Funds Distribution',
+            backgroundColor: [
+              '#EEC705',
+              '#14D37F',
+              '#673AD5'
+            ],
+            pointBackgroundColor: 'white',
+            borderWidth: 1,
+            pointBorderColor: '#249EBF',
+            //Data to be represented on y-axis
+            data: [141.78, 1761.71, 401.70]
+          },
+        ]
+      },
+      //Chart.js options that controls the appearance of the chart
+      options: {
+        tooltips: {
+          callbacks: {
+            label: function(t,d) {
+                return d.labels[t.index] + ': $' + d.datasets[t.datasetIndex].data[t.index].toLocaleString()
+            }
+          }
+        },
+        cutoutPercentage: 40,
+        legend: {
+          display: true
+        },
+        title: {
+          display: false
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+					animateScale: true,
+					animateRotate: true
+        }
+      }
+    }
+  },
+  mounted () {
+    //renderChart function renders the chart with the datacollection and options object.
+    this.renderChart(this.datacollection, this.options)
   }
 }
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>

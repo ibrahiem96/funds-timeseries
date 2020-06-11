@@ -35,8 +35,12 @@
           tooltips: {
             callbacks: {
               title: function(){
-                //TODO: figure out how to add tooltip title separately for each bar
                 return ''
+
+              },
+              beforeLabel: function(tooltipItem, data){
+                return data.datasets[tooltipItem.datasetIndex].label
+
               },
               label: function(tooltipItem) {
                 return '$' + Number(tooltipItem.yLabel)

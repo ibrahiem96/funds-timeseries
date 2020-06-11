@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h1>Donation Usage</h1>
+    <h1>Donation Funds Usage</h1>
     <div class="columns">
       <div class="column">
         <!-- <h3>Line Chart</h3> -->
@@ -38,62 +38,6 @@ export default {
     // BarChart,
     // BubbleChart,
     // Reactive
-  },
-  data() {
-    return {
-      // instantiating datacollection with null
-      datacollection: null,
-    };
-  },
-  created() {
-    //anytime the vue instance is created, call the fillData() function.
-    this.fillData();
-  },
-  methods: {
-    fillData() {
-      this.datacollection = {
-        // Data for the y-axis of the chart
-        labels: [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ],
-        datasets: [
-          {
-            label: "Data One",
-            backgroundColor: "#f87979",
-            // Data for the x-axis of the chart
-            data: [
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-              this.getRandomInt(),
-            ],
-          },
-        ],
-      }
-    },
-    getRandomInt() {
-      // JS function to generate numbers to be used for the chart
-      return Math.floor(Math.random() * (50 - 5 + 1)) + 5;
-    },
-  },
+  }
 }
 </script>
