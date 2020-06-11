@@ -3,15 +3,20 @@ import App from './App.vue'
 import router from './router'
 import 'chart.js'
 import 'hchs-vue-charts'
-import Chartkick from 'chartkick'
-import VueChartkick from 'vue-chartkick'
 
 Vue.use(window.VueCharts)
-Vue.use(VueChartkick, { Chartkick })
 
 Vue.config.productionTip = false
 
 new Vue({
   router,
+  watch: {
+    '$route':{
+      handler: (to) => {
+        document.title = to.meta.title || 'Your Website'
+      },
+       immediate: true
+    }
+  },
   render: h => h(App)
 }).$mount('#app')

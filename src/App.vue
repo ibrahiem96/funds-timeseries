@@ -8,7 +8,7 @@
         <li><router-link to="/distribution">Donation Distribution</router-link></li>
       </ul>
     </div>
-    <router-view />
+    <router-view></router-view>
   </div>
 </template>
 

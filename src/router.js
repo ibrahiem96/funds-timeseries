@@ -12,22 +12,34 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Home
+      component: Home,
+      meta: {
+        title: 'Masjid Al Muminun Funds'
+      }
     },
     {
       path: '/goal',
       name: 'FundsGoal',
-      component: FundsGoal
+      component: FundsGoal,
+      meta: {
+        title: 'MM Funds Goal'
+      }
     },
     {
       path: '/usage',
       name: 'FundsUsage',
-      component: FundsUsage
+      component: FundsUsage,
+      meta: {
+        title: 'MM Funds Usage'
+      }
     },
     {
       path: '/distribution',
       name: 'FundsDistribution',
-      component: FundsDistribution
+      component: FundsDistribution,
+      meta: {
+        title: 'MM Funds Distribution'
+      }
     }
   ]
 })
