@@ -2,7 +2,7 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <h1 style="padding-top: 50px">Funds Management for Masjid al Muminun</h1>
+        <h1>Funds Management for Masjid al Muminun</h1>
         <h2>Providing support for a community masjid and transparency for our donors</h2>
         <h3>
           |

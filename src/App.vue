@@ -4,7 +4,7 @@
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/goal">Donation Goal</router-link></li>
-        <li><router-link to="/usage">Donation Usage</router-link></li>
+        <!-- <li><router-link to="/usage">Donation Usage</router-link></li> -->
         <li><router-link to="/distribution">Donation Distribution</router-link></li>
       </ul>
     </div>
@@ -39,7 +39,7 @@
 
 #nav ul {
   list-style-type: none;
-  padding: 0;
+  padding-bottom: 50px;
 }
 
 #nav ul li {
