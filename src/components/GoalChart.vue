@@ -26,7 +26,7 @@
               borderWidth: 1,
               pointBorderColor: '#00000',
               //Data to be represented on y-axis
-              data: [5000]
+              data: [7000]
             }
           ]
         },

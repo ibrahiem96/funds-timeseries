@@ -7,7 +7,7 @@
         <line-chart></line-chart>
       </div> -->
       <div class="column">
-        <h3>Goal: $10,000</h3>
+        <h3>Goal: $7,000</h3>
         <bar-chart></bar-chart>
       </div>
     </div>
