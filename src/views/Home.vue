@@ -19,8 +19,9 @@
           Donate
         </h2>
         <a href="https://venmo.com/Zosharif100">
-            Donate through Venmo
+            Venmo
         </a>
+        <p>Quickpay: zosharif100@gmail.com</p>
       </div>
     </div>
   </section>
