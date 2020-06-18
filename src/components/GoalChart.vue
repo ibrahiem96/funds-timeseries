@@ -17,7 +17,7 @@
               borderWidth: 1,
               pointBorderColor: '#00000',
               //Data to be represented on y-axis
-              data: [1125]
+              data: [3970]
             },
             {
               label: 'Fund Goal',
@@ -26,7 +26,7 @@
               borderWidth: 1,
               pointBorderColor: '#00000',
               //Data to be represented on y-axis
-              data: [7000]
+              data: [5000]
             }
           ]
         },

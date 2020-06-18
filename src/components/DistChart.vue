@@ -22,7 +22,7 @@ export default {
             borderWidth: 1,
             pointBorderColor: '#249EBF',
             //Data to be represented on y-axis
-            data: [141.78, 1761.71, 401.70]
+            data: [188.65, 2430.09, 896.10]
           },
         ]
       },
