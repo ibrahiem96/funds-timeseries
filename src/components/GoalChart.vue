@@ -20,7 +20,7 @@
               data: [3970]
             },
             {
-              label: 'Fund Goal',
+              label: 'Funds Remaining',
               backgroundColor: '#E1E1E1',
               pointBackgroundColor: 'white',
               borderWidth: 1,
